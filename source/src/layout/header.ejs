@@ -1,0 +1,87 @@
+<%- include('./head.ejs') %>
+<header class="header">
+  <div class="wrapper header__wrapper">
+    <nav class="header__nav">
+      <div class="close-menu">
+        <span class="close-menu__line"></span>
+        <span class="close-menu__line"></span>
+      </div>
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#1" class="header__nav-link">Каталог</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#2" class="header__nav-link">О компании</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#3" class="header__nav-link">Магазины</a>
+        </li>
+      </ul>
+      <ul class="header__mob-user-list">
+        <li class="header__user-item loop">
+          <a href="#" class="header__user-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.6033 14.6031L18.2858 18.2857" stroke="black" stroke-linejoin="round"/>
+              <path d="M16.4444 9.07927C16.4444 13.1469 13.147 16.4443 9.07939 16.4443C5.01179 16.4443 1.71436 13.1469 1.71436 9.07927C1.71436 5.01167 5.01179 1.71423 9.07939 1.71423C13.147 1.71423 16.4444 5.01167 16.4444 9.07927Z" stroke="black"/>
+            </svg>            
+          </a>
+        </li>
+        <li class="header__user-item people">
+          <a href="#" class="header__user-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.806 7.51997C15.806 10.7586 13.1821 13.3263 9.9289 13.3263C6.67572 13.3263 4.05176 10.7586 4.05176 7.51997C4.05176 4.27411 6.68304 1.64282 9.9289 1.64282C13.1748 1.64282 15.806 4.27411 15.806 7.51997Z" stroke="black"/>
+              <path d="M1.14282 19.0743V19.0743C4.96511 12.061 15.0348 12.061 18.8571 19.0743V19.0743" stroke="black"/>
+            </svg>           
+          </a>
+        </li>
+        <li class="header__user-item heart">
+          <a href="#" class="header__user-link">
+            <span class="header__user-count">8</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.9089 10.8218L10.0077 17.7143L3.10655 10.8218C2.65135 10.3751 2.2928 9.83824 2.05347 9.24495C1.81415 8.65166 1.69923 8.01483 1.71595 7.37456C1.73268 6.73429 1.88068 6.10444 2.15065 5.52468C2.42062 4.94492 2.8067 4.42782 3.28459 4.00592C3.76247 3.58402 4.32181 3.26648 4.92737 3.07328C5.53293 2.88008 6.1716 2.81541 6.80317 2.88335C7.43473 2.95129 8.0455 3.15036 8.59702 3.46803C9.14854 3.7857 9.62886 4.21509 10.0077 4.72915C10.3883 4.21882 10.8691 3.79319 11.4203 3.47889C11.9714 3.16459 12.581 2.96839 13.2107 2.90258C13.8405 2.83676 14.477 2.90274 15.0804 3.09639C15.6837 3.29004 16.2409 3.60719 16.7171 4.02799C17.1933 4.44879 17.5783 4.96418 17.8479 5.5419C18.1175 6.11962 18.2659 6.74725 18.2839 7.38549C18.3019 8.02373 18.1891 8.65884 17.9525 9.25109C17.7159 9.84333 17.3606 10.38 16.9089 10.8274" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>            
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="header__logo-link"><img src="../assets/image/logo.png" alt="" class="header__logo"></a>
+    <ul class="header__user-list">
+      <li class="header__user-item loop">
+        <a href="#" class="header__user-link">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.6033 14.6031L18.2858 18.2857" stroke="black" stroke-linejoin="round"/>
+            <path d="M16.4444 9.07927C16.4444 13.1469 13.147 16.4443 9.07939 16.4443C5.01179 16.4443 1.71436 13.1469 1.71436 9.07927C1.71436 5.01167 5.01179 1.71423 9.07939 1.71423C13.147 1.71423 16.4444 5.01167 16.4444 9.07927Z" stroke="black"/>
+          </svg>            
+        </a>
+      </li>
+      <li class="header__user-item people">
+        <a href="#" class="header__user-link">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.806 7.51997C15.806 10.7586 13.1821 13.3263 9.9289 13.3263C6.67572 13.3263 4.05176 10.7586 4.05176 7.51997C4.05176 4.27411 6.68304 1.64282 9.9289 1.64282C13.1748 1.64282 15.806 4.27411 15.806 7.51997Z" stroke="black"/>
+            <path d="M1.14282 19.0743V19.0743C4.96511 12.061 15.0348 12.061 18.8571 19.0743V19.0743" stroke="black"/>
+          </svg>           
+        </a>
+      </li>
+      <li class="header__user-item heart">
+        <a href="#" class="header__user-link">
+          <span class="header__user-count">8</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.9089 10.8218L10.0077 17.7143L3.10655 10.8218C2.65135 10.3751 2.2928 9.83824 2.05347 9.24495C1.81415 8.65166 1.69923 8.01483 1.71595 7.37456C1.73268 6.73429 1.88068 6.10444 2.15065 5.52468C2.42062 4.94492 2.8067 4.42782 3.28459 4.00592C3.76247 3.58402 4.32181 3.26648 4.92737 3.07328C5.53293 2.88008 6.1716 2.81541 6.80317 2.88335C7.43473 2.95129 8.0455 3.15036 8.59702 3.46803C9.14854 3.7857 9.62886 4.21509 10.0077 4.72915C10.3883 4.21882 10.8691 3.79319 11.4203 3.47889C11.9714 3.16459 12.581 2.96839 13.2107 2.90258C13.8405 2.83676 14.477 2.90274 15.0804 3.09639C15.6837 3.29004 16.2409 3.60719 16.7171 4.02799C17.1933 4.44879 17.5783 4.96418 17.8479 5.5419C18.1175 6.11962 18.2659 6.74725 18.2839 7.38549C18.3019 8.02373 18.1891 8.65884 17.9525 9.25109C17.7159 9.84333 17.3606 10.38 16.9089 10.8274" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
+        </a>
+      </li>
+      <li class="header__user-item bag">
+        <a href="#" class="header__user-link">
+          <span class="header__user-count">4</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.85711 4.62496C7.43524 0.73571 13.0339 0.752281 13.7143 4.62496M17.4183 6.3396L18.8334 15.4385C18.8781 15.7265 18.8595 16.0206 18.7786 16.3008C18.6978 16.581 18.5568 16.8406 18.3651 17.0618C18.1735 17.283 17.9358 17.4606 17.6684 17.5825C17.4009 17.7043 17.11 17.7676 16.8156 17.7678H3.18642C2.8918 17.7679 2.60066 17.7048 2.33295 17.5831C2.06525 17.4614 1.82731 17.2838 1.63546 17.0626C1.4436 16.8413 1.30237 16.5816 1.22143 16.3013C1.1405 16.021 1.12178 15.7267 1.16657 15.4385L2.58159 6.3396C2.65581 5.862 2.90043 5.42649 3.27114 5.11196C3.64185 4.79742 4.11414 4.62466 4.60246 4.62496H15.3995C15.8877 4.6249 16.3597 4.79778 16.7302 5.11229C17.1007 5.4268 17.3452 5.86217 17.4194 6.3396H17.4183Z" stroke="black" stroke-linejoin="round"/>
+          </svg>           
+        </a>
+      </li>
+    </ul>
+    <div class="open-menu">
+      <span class="open-menu__line"></span>
+      <span class="open-menu__line"></span>
+    </div>
+  </div>
+</header>

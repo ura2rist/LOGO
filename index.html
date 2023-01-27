@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LOGO</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer"></script>
+  <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js" defer="defer"></script>
+<script defer="defer" src="script/main.js"></script><link href="css/style.css" rel="stylesheet"></head>
+<body class="body">
+<header class="header">
+  <div class="wrapper header__wrapper">
+    <nav class="header__nav">
+      <div class="close-menu">
+        <span class="close-menu__line"></span>
+        <span class="close-menu__line"></span>
+      </div>
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#1" class="header__nav-link">Каталог</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#2" class="header__nav-link">О компании</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#3" class="header__nav-link">Магазины</a>
+        </li>
+      </ul>
+      <ul class="header__mob-user-list">
+        <li class="header__user-item loop">
+          <a href="#" class="header__user-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.6033 14.6031L18.2858 18.2857" stroke="black" stroke-linejoin="round"/>
+              <path d="M16.4444 9.07927C16.4444 13.1469 13.147 16.4443 9.07939 16.4443C5.01179 16.4443 1.71436 13.1469 1.71436 9.07927C1.71436 5.01167 5.01179 1.71423 9.07939 1.71423C13.147 1.71423 16.4444 5.01167 16.4444 9.07927Z" stroke="black"/>
+            </svg>            
+          </a>
+        </li>
+        <li class="header__user-item people">
+          <a href="#" class="header__user-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.806 7.51997C15.806 10.7586 13.1821 13.3263 9.9289 13.3263C6.67572 13.3263 4.05176 10.7586 4.05176 7.51997C4.05176 4.27411 6.68304 1.64282 9.9289 1.64282C13.1748 1.64282 15.806 4.27411 15.806 7.51997Z" stroke="black"/>
+              <path d="M1.14282 19.0743V19.0743C4.96511 12.061 15.0348 12.061 18.8571 19.0743V19.0743" stroke="black"/>
+            </svg>           
+          </a>
+        </li>
+        <li class="header__user-item heart">
+          <a href="#" class="header__user-link">
+            <span class="header__user-count">8</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.9089 10.8218L10.0077 17.7143L3.10655 10.8218C2.65135 10.3751 2.2928 9.83824 2.05347 9.24495C1.81415 8.65166 1.69923 8.01483 1.71595 7.37456C1.73268 6.73429 1.88068 6.10444 2.15065 5.52468C2.42062 4.94492 2.8067 4.42782 3.28459 4.00592C3.76247 3.58402 4.32181 3.26648 4.92737 3.07328C5.53293 2.88008 6.1716 2.81541 6.80317 2.88335C7.43473 2.95129 8.0455 3.15036 8.59702 3.46803C9.14854 3.7857 9.62886 4.21509 10.0077 4.72915C10.3883 4.21882 10.8691 3.79319 11.4203 3.47889C11.9714 3.16459 12.581 2.96839 13.2107 2.90258C13.8405 2.83676 14.477 2.90274 15.0804 3.09639C15.6837 3.29004 16.2409 3.60719 16.7171 4.02799C17.1933 4.44879 17.5783 4.96418 17.8479 5.5419C18.1175 6.11962 18.2659 6.74725 18.2839 7.38549C18.3019 8.02373 18.1891 8.65884 17.9525 9.25109C17.7159 9.84333 17.3606 10.38 16.9089 10.8274" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>            
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="header__logo-link"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAWCAYAAAA2CDmeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANDSURBVHgBvZrhdRshDMf/6ev3OhNYnSC3QegEzQZhg3gD3wZNJ0g6QdIJ7E5gZ4LYE7SZoEUP8cDucQcH5Pee3tk+WQIJOJB9AUAbuYLlTa6f5Ho08mjkD+qxEJ9kZCnvSWQv8sPIFvVgHzew/byE7R9/1sn9g/j9ZeQZZf1VRq6NfJb37JPktevfd/E5ijbyV+Qb6kNGnoz0sMEYuq+NvEob+KpQ7rM3soIPSkwn9EvIR4kdvg71j5N/H/h5mPKzgE+IQl3uYJOxSNTvg7asMY9cnwQfLI102D4Ht0/UJ9hVxyX/Zky5RULW4jgXjflJ4Rn+hHw4uNzWVYb+DunJCOnh+xdNSu2ErMUeYR4rJDR6wOfcZYdRsEtLCjvMG2yODWzffiPS3poJIfi1sgTXaO741PKjkb/kxOxMsa7gi2CTwXYGZ3TNhLhApo7sGAq+XVNLiXsGENpCFX3dw/ePzm/WSggFtjqUwbPCjaLNiN6N6OzQHl3Rl4KPVf8BbQhnxR5l8JlgK68V4svW10C/NTV9bQM7160SQnKtFZyXAdsxnwe0hyr7Osi1a5WQ1L1/KocE24T3g1AXN+AWrRLiqJ2YFC7xfhAq0zohzBJ1mVoGr9Ae1wZCXfYf0QZ+kN/K6y+wpYIS3Ew7IL5J4M9JhPVTnl+8A9Sie4XTGc3LyDOGi5yhLx5wR5SxDOyeUGvb2wW2NijnAdOHzPBUrzGP8OSMRF+pZZYx3JlGn99ocTDkzpU+S1IOYWFxdO4g0Eg7X9Tw5SD4SsR/zElITFejTjlfiY2U+lJ46lXIRyM9yI+Fvhxu9uuhm3McjAVqg/JGvyK9gOeqtW7EEfJQSE9IWEFIqbMNQWKjjynkBk9jPCGEsgCtZ3yPAp+7zO9q5C1Dpc9K/s7jmEJOqZtgO94n6uUmhZOR8wNTDZ8PGFnPI3TIHwBJP2rd4TTbCn5rdy4cLDdde6TRB/a5MbGio5L7pVViRuP0J9NuRFfBt29ql3UO4fRXwDWGE8OJWInuYFsu4AO6xDx+wu7XUyDYjt/Cnxd4783nAP6DxQF2379FXRT8nxwW4sedU47wO52XoA1z6nAEG3D20wV++PoGXyjdxgz8Az+3J/xz6OiVAAAAAElFTkSuQmCC" alt="" class="header__logo"></a>
+    <ul class="header__user-list">
+      <li class="header__user-item loop">
+        <a href="#" class="header__user-link">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.6033 14.6031L18.2858 18.2857" stroke="black" stroke-linejoin="round"/>
+            <path d="M16.4444 9.07927C16.4444 13.1469 13.147 16.4443 9.07939 16.4443C5.01179 16.4443 1.71436 13.1469 1.71436 9.07927C1.71436 5.01167 5.01179 1.71423 9.07939 1.71423C13.147 1.71423 16.4444 5.01167 16.4444 9.07927Z" stroke="black"/>
+          </svg>            
+        </a>
+      </li>
+      <li class="header__user-item people">
+        <a href="#" class="header__user-link">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.806 7.51997C15.806 10.7586 13.1821 13.3263 9.9289 13.3263C6.67572 13.3263 4.05176 10.7586 4.05176 7.51997C4.05176 4.27411 6.68304 1.64282 9.9289 1.64282C13.1748 1.64282 15.806 4.27411 15.806 7.51997Z" stroke="black"/>
+            <path d="M1.14282 19.0743V19.0743C4.96511 12.061 15.0348 12.061 18.8571 19.0743V19.0743" stroke="black"/>
+          </svg>           
+        </a>
+      </li>
+      <li class="header__user-item heart">
+        <a href="#" class="header__user-link">
+          <span class="header__user-count">8</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.9089 10.8218L10.0077 17.7143L3.10655 10.8218C2.65135 10.3751 2.2928 9.83824 2.05347 9.24495C1.81415 8.65166 1.69923 8.01483 1.71595 7.37456C1.73268 6.73429 1.88068 6.10444 2.15065 5.52468C2.42062 4.94492 2.8067 4.42782 3.28459 4.00592C3.76247 3.58402 4.32181 3.26648 4.92737 3.07328C5.53293 2.88008 6.1716 2.81541 6.80317 2.88335C7.43473 2.95129 8.0455 3.15036 8.59702 3.46803C9.14854 3.7857 9.62886 4.21509 10.0077 4.72915C10.3883 4.21882 10.8691 3.79319 11.4203 3.47889C11.9714 3.16459 12.581 2.96839 13.2107 2.90258C13.8405 2.83676 14.477 2.90274 15.0804 3.09639C15.6837 3.29004 16.2409 3.60719 16.7171 4.02799C17.1933 4.44879 17.5783 4.96418 17.8479 5.5419C18.1175 6.11962 18.2659 6.74725 18.2839 7.38549C18.3019 8.02373 18.1891 8.65884 17.9525 9.25109C17.7159 9.84333 17.3606 10.38 16.9089 10.8274" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
+        </a>
+      </li>
+      <li class="header__user-item bag">
+        <a href="#" class="header__user-link">
+          <span class="header__user-count">4</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.85711 4.62496C7.43524 0.73571 13.0339 0.752281 13.7143 4.62496M17.4183 6.3396L18.8334 15.4385C18.8781 15.7265 18.8595 16.0206 18.7786 16.3008C18.6978 16.581 18.5568 16.8406 18.3651 17.0618C18.1735 17.283 17.9358 17.4606 17.6684 17.5825C17.4009 17.7043 17.11 17.7676 16.8156 17.7678H3.18642C2.8918 17.7679 2.60066 17.7048 2.33295 17.5831C2.06525 17.4614 1.82731 17.2838 1.63546 17.0626C1.4436 16.8413 1.30237 16.5816 1.22143 16.3013C1.1405 16.021 1.12178 15.7267 1.16657 15.4385L2.58159 6.3396C2.65581 5.862 2.90043 5.42649 3.27114 5.11196C3.64185 4.79742 4.11414 4.62466 4.60246 4.62496H15.3995C15.8877 4.6249 16.3597 4.79778 16.7302 5.11229C17.1007 5.4268 17.3452 5.86217 17.4194 6.3396H17.4183Z" stroke="black" stroke-linejoin="round"/>
+          </svg>           
+        </a>
+      </li>
+    </ul>
+    <div class="open-menu">
+      <span class="open-menu__line"></span>
+      <span class="open-menu__line"></span>
+    </div>
+  </div>
+</header>
+<div class="wrapper breadcrumbs-wrapper">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Оформление заказа</a>
+    </li>
+  </ul>
+</div>
+<main class="main">
+  <section class="payment">
+    <div class="wrapper payment__wrapper">
+      <div class="products">
+        <div class="products__title-wrapper">
+          <h1 class="main-title products__title">Оформление заказа</h1>
+          <span class="products__account-message">Есть аккаунт?<a href="#" class="products__account-link">Войти</a></span>
+        </div>
+        <div class="products__amount">
+          <p class="products__amount-text">3 товара на сумму 25 000 ₽</p>
+        </div>
+        <div class="products__info products__info_arrow">
+          <div class="products__info-wrapper">
+            <img src="image/photo_one.3a829795.png" alt="#" class="products__img">
+            <h3 class="products__name">Утепленная стеганная куртка женская Top Hills</h3>
+            <div class="products__charact-wrapper">
+              <div class="products__charact"><span class="products__charact-name">Артикул</span> <span class="products__charact-description">512-05</span></div>
+              <div class="products__charact"><span class="products__charact-name">Сезон</span> <span class="products__charact-description">Осень-зима</span></div>
+              <ul class="products__size-list">
+                <li class="products__size-item">
+                  <input type="radio" name="size" value="XS" id="xs" class="products__size-radio">
+                  <label for="xs" class="products__size-text">XS</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size" value="S" id="s" class="products__size-radio">
+                  <label for="s" class="products__size-text">S</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size" value="M" id="m" class="products__size-radio" checked="checked">
+                  <label for="m" class="products__size-text">M</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size" value="L" id="l" class="products__size-radio">
+                  <label for="l" class="products__size-text">L</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size" value="XL" id="xl" class="products__size-radio">
+                  <label for="xl" class="products__size-text">XL</label>
+                </li>
+              </ul>
+              <ul class="products__color-list">
+                <li class="products__color-item">
+                  <input type="radio" name="color" value="#444444" id="color_one" class="products__color-radio" checked="checked">
+                  <label for="color_one" class="products__color" style="background-color: #444444;"></label>
+                </li>
+                <li class="products__color-item">
+                  <input type="radio" name="color" value="#106DA2" id="color_two" class="products__color-radio">
+                  <label for="color_two" class="products__color" style="background-color: #106DA2;"></label>
+                </li>
+                <li class="products__color-item">
+                  <input type="radio" name="color" value="#AE6D0C" id="color_three" class="products__color-radio">
+                  <label for="color_three" class="products__color" style="background-color: #AE6D0C;"></label>
+                </li>
+              </ul>
+            </div>
+            <div class="products__count-wrapper">
+              <div class="products__count-price">
+                <p class="products__count-old">12 000 ₽</p>
+                <p class="products__count-new">10 000 ₽</p>
+              </div>
+              <div class="products__count-number number">
+                <div class="number__decrement"></div>
+                <input type="number" class="number__input" value="2" min="1">
+                <div class="number__increment"></div>
+              </div>
+              <div class="products__count-price">
+                <p class="products__count-old">24 000 ₽</p>
+                <p class="products__count-new">20 000 ₽</p>
+              </div>
+            </div>
+          </div>
+          <svg class="products__arrow" width="102" height="24" viewBox="0 0 102 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M101.061 13.0607C101.646 12.4749 101.646 11.5251 101.061 10.9393L91.5147 1.3934C90.9289 0.807611 89.9792 0.807611 89.3934 1.3934C88.8076 1.97919 88.8076 2.92893 89.3934 3.51472L97.8787 12L89.3934 20.4853C88.8076 21.0711 88.8076 22.0208 89.3934 22.6066C89.9792 23.1924 90.9289 23.1924 91.5147 22.6066L101.061 13.0607ZM0 13.5H100V10.5H0V13.5Z" fill="black"/>
+          </svg>
+          <div class="products__info-delete">
+            <span class="products__info-line"></span>
+            <span class="products__info-line"></span>
+          </div>
+        </div>
+        <div class="products__info">
+          <div class="products__info-wrapper products__delete">
+            <div class="products__delete-wrapper">
+              <p class="products__delete-message">Товар <span class="products__delete-name">Наименование товара</span> был удален из корзины.</p><button class="products__delete-btn">Восстановить</button>
+              <div class="products__info-delete">
+                <span class="products__info-line"></span>
+                <span class="products__info-line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products__info">
+          <div class="products__info-wrapper">
+            <img src="image/photo_two.a65e6fb3.png" alt="#" class="products__img">
+            <h3 class="products__name">Вязанная шапка Zolla</h3>
+            <div class="products__charact-wrapper">
+              <div class="products__charact"><span class="products__charact-name">Артикул</span> <span class="products__charact-description">891-256</span></div>
+              <div class="products__charact"><span class="products__charact-name">Сезон</span> <span class="products__charact-description">Демисезон</span></div>
+              <ul class="products__size-list">
+                <li class="products__size-item">
+                  <input type="radio" name="size-q" value="XS" id="xs-q" class="products__size-radio">
+                  <label for="xs-q" class="products__size-text">XS</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size-q" value="S" id="s-q" class="products__size-radio" checked="checked">
+                  <label for="s-q" class="products__size-text">S</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size-q" value="M" id="m-q" class="products__size-radio">
+                  <label for="m-q" class="products__size-text">M</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size-q" value="L" id="l-q" class="products__size-radio" disabled="disabled">
+                  <label for="l-q" class="products__size-text">L</label>
+                </li>
+                <li class="products__size-item">
+                  <input type="radio" name="size-q" value="XL" id="xl-q" class="products__size-radio" disabled="disabled">
+                  <label for="xl-q" class="products__size-text">XL</label>
+                </li>
+              </ul>
+              <ul class="products__color-list">
+                <li class="products__color-item">
+                  <input type="radio" name="color-q" value="#444444" id="color_one-q" class="products__color-radio" checked="checked">
+                  <label for="color_one-q" class="products__color" style="background-color: #444444;"></label>
+                </li>
+              </ul>
+            </div>
+            <div class="products__count-wrapper">
+              <div class="products__count-price">
+                <p class="products__count-new">500 ₽</p>
+              </div>
+              <div class="products__count-number number">
+                <div class="number__decrement"></div>
+                <input type="number" class="number__input" value="1" min="1">
+                <div class="number__increment"></div>
+              </div>
+              <div class="products__count-price">
+                <p class="products__count-new">500 ₽</p>
+              </div>
+            </div>
+          </div>
+          <div class="products__info-delete">
+            <span class="products__info-line"></span>
+            <span class="products__info-line"></span>
+          </div>
+        </div>
+      </div>
+      <div class="total">
+        <div class="total__wrapper">
+          <ul class="total__list">
+            <li class="total__item">
+              <p class="total__name">Товары</p><p class="total__count">24 500 ₽</p>
+            </li>
+            <li class="total__item">
+             <p class="total__name">Скидка</p><p class="total__count">- 4 500 ₽</p>
+            </li>
+            <li class="total__item">
+              <p class="total__name">Акции</p><p class="total__count">- 4 000 ₽</p>
+            </li>
+            <li class="total__item">
+              <p class="total__name">Промокод</p><p class="total__count">- 500 ₽</p>
+            </li>
+            <li class="total__item">
+              <p class="total__name">Доставка</p><p class="total__count">200 ₽</p>
+            </li>
+          </ul>
+          <div class="total__stock">
+            <div class="total__stock-text">
+              <p class="total__stock-title">Получить товар со склада</p>
+              <p class="total__stock-description">Сроки получения могут измениться</p>
+            </div>
+            <div class="toggler">
+              <div class="toggler__wrapper"></div>
+            </div>
+          </div>
+          <div class="total__results">
+            <p class="total__results-title">Итого:</p>
+            <p class="total__results-description">20 700 ₽</p>
+          </div>
+          <div class="total__promo">
+            <div class="input-wrapper input-error">
+              <input type="text" placeholder="Введите промокод">
+              <p class="input-error__message">Подпись</p>
+              <p class="input-success__message">Подпись</p>
+            </div>
+          </div>
+          <div class="total__design">
+            <input type="button" placeholder="Введите промокод" class="btn total__btn" value="Оформить заказ">
+          </div>
+          <div class="total__agreement">
+            <p class="total__agreement-text">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с <a class="total__agreement-link" href="#">политикой конфиденциальности.</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="data">
+        <div class="data__inputs">
+          <h2 class="title data__inputs-title">Контактные данные</h2>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Имя">
+            <span class="input-header">Имя</span>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Фамилия">
+            <span class="input-header">Фамилия</span>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Телефон">
+            <span class="input-header">Телефон</span>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Email">
+            <span class="input-header">Email</span>
+          </div>
+          <div class="input-wrapper data__address">
+            <input type="text" placeholder="Адрес доставки" class="address">
+            <span class="input-header">Адрес доставки</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.6033 14.6031L18.2858 18.2857" stroke="black" stroke-linejoin="round"/>
+              <path d="M16.4444 9.07927C16.4444 13.1469 13.147 16.4443 9.07939 16.4443C5.01179 16.4443 1.71436 13.1469 1.71436 9.07927C1.71436 5.01167 5.01179 1.71423 9.07939 1.71423C13.147 1.71423 16.4444 5.01167 16.4444 9.07927Z" stroke="black"/>
+            </svg>
+          </div>
+        </div>
+        <div class="data__map" id="map-1"></div>
+        <div class="data__payment">
+          <h2 class="title">Оплата</h2>
+          <ul class="data__payment-group">
+            <li class="data__payment-item">
+              <label class="radio">
+                <input type="radio" name="payment" value="Наличными курьеру" class="radio__input" checked="checked">
+                <span class="radio__text">Наличными курьеру</span>
+              </label>
+            </li>
+            <li class="data__payment-item">
+              <label class="radio">
+                <input type="radio" name="payment" value="Картой курьеру" class="radio__input">
+                <span class="radio__text">Картой курьеру</span>
+              </label>
+            </li>
+            <li class="data__payment-item">
+              <label class="radio">
+                <input type="radio" name="payment" value="Картой онлайн" class="radio__input">
+                <span class="radio__text">Картой онлайн</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="data__comment">
+          <h2 class="title">Комментарий к заказу</h2>
+          <div class="input-wrapper input-textarea">
+            <textarea name="" id="" cols="30" rows="6" placeholder="Комментарий к заказу"></textarea>
+            <span class="input-header">Комментарий к заказу</span>
+            <p class="input-textarea__text">Использовано <span class="input-textarea__count">0</span>/142 символов</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  </body>
+</html>

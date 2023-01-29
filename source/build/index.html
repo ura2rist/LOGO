@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>LOGO</title>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=0038b4dd-88b8-4c65-9f4d-02329ee40977&lang=ru_RU" type="text/javascript">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer"></script>
   <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet">
@@ -187,7 +187,7 @@
             <span class="products__info-line"></span>
           </div>
         </div>
-        <div class="products__info">
+        <div class="products__info products__info_hidden">
           <div class="products__info-wrapper products__delete">
             <div class="products__delete-wrapper">
               <p class="products__delete-message">Товар <span class="products__delete-name">Наименование товара</span> был удален из корзины.</p><button class="products__delete-btn">Восстановить</button>
@@ -287,10 +287,11 @@
             <p class="total__results-description">20 700 ₽</p>
           </div>
           <div class="total__promo">
-            <div class="input-wrapper input-error">
+            <div class="input-wrapper input-wrapper_bth-inner">
               <input type="text" placeholder="Введите промокод">
-              <p class="input-error__message">Подпись</p>
-              <p class="input-success__message">Подпись</p>
+              <button class="input-wrapper__btn">Применить</button>
+              <p class="input-error__message">1B6D9FC - купон не найден</p>
+              <p class="input-success__message">1B6D9FC - купон применен</p>
             </div>
           </div>
           <div class="total__design">
@@ -304,25 +305,37 @@
       <div class="data">
         <div class="data__inputs">
           <h2 class="title data__inputs-title">Контактные данные</h2>
-          <div class="input-wrapper">
-            <input type="text" placeholder="Имя">
+          <div class="input-wrapper input-req onlyText">
+            <input type="text" placeholder="Имя" class="name">
             <span class="input-header">Имя</span>
+            <p class="input-error__message"></p>
+            <p class="input-success__message"></p>
           </div>
-          <div class="input-wrapper">
-            <input type="text" placeholder="Фамилия">
+          <div class="input-wrapper input-req onlyText">
+            <input type="text" placeholder="Фамилия" class="surname">
             <span class="input-header">Фамилия</span>
+            <p class="input-error__message"></p>
+            <p class="input-success__message"></p>
           </div>
-          <div class="input-wrapper">
-            <input type="text" placeholder="Телефон">
+          <div class="input-wrapper input-req">
+            <input type="text" placeholder="Телефон" data-phone-pattern class="phone">
             <span class="input-header">Телефон</span>
+            <p class="input-error__message"></p>
+            <p class="input-success__message"></p>
           </div>
-          <div class="input-wrapper">
-            <input type="text" placeholder="Email">
+          <div class="input-wrapper input-req">
+            <input type="text" placeholder="Email" class="mail">
             <span class="input-header">Email</span>
+            <p class="input-error__message"></p>
+            <p class="input-success__message"></p>
           </div>
-          <div class="input-wrapper data__address">
+          <div class="input-wrapper input-dropdown data__address input-req">
             <input type="text" placeholder="Адрес доставки" class="address">
             <span class="input-header">Адрес доставки</span>
+            <p class="input-error__message"></p>
+            <p class="input-success__message"></p>
+            <ul class="input-dropdown__output">
+            </ul>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.6033 14.6031L18.2858 18.2857" stroke="black" stroke-linejoin="round"/>
               <path d="M16.4444 9.07927C16.4444 13.1469 13.147 16.4443 9.07939 16.4443C5.01179 16.4443 1.71436 13.1469 1.71436 9.07927C1.71436 5.01167 5.01179 1.71423 9.07939 1.71423C13.147 1.71423 16.4444 5.01167 16.4444 9.07927Z" stroke="black"/>
@@ -356,7 +369,7 @@
         <div class="data__comment">
           <h2 class="title">Комментарий к заказу</h2>
           <div class="input-wrapper input-textarea">
-            <textarea name="" id="" cols="30" rows="6" placeholder="Комментарий к заказу"></textarea>
+            <textarea name="" id="" cols="30" rows="6" placeholder="Комментарий к заказу" class="comment"></textarea>
             <span class="input-header">Комментарий к заказу</span>
             <p class="input-textarea__text">Использовано <span class="input-textarea__count">0</span>/142 символов</p>
           </div>

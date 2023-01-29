@@ -308,6 +308,20 @@
     &_arrow {
       padding-bottom: 8px;
     }
+
+    &_hidden {
+
+      & .products__info-wrapper,
+      & .products__arrow,
+      & .products__info-delete{
+        display: none;
+      }
+
+      & .products__info-wrapper.products__delete,
+      & .products__info-wrapper.products__delete .products__info-delete{
+        display: flex;
+      }
+    }
   }
 
   &__info-delete {
@@ -428,6 +442,7 @@
     cursor: pointer;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s ease;
+    align-self: center;
 
     &:hover,
     &:focus {
@@ -720,6 +735,7 @@
 
 .input-wrapper {
   position: relative;
+  border: 1px solid var(--color-grey_2);
   
   & input,
   & textarea {
@@ -727,8 +743,8 @@
     width: 100%;
     padding: 16px 19px 15px;
     font-size: 16px;
-    border: 1px solid var(--color-grey_2);
     outline: none;
+    border: none;
 
     &:not(:placeholder-shown) + .input-header {
 			display: block;
@@ -738,36 +754,94 @@
   & textarea {
     resize: none;
   }
+
+  &__btn {
+    display: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &_bth-inner {
+    display: flex;
+
+    & input:not(:placeholder-shown) + .input-wrapper__btn {
+      display: block;
+    }
+  }
 }
 
-.input-error__message {
-  display: none;
-}
-
+.input-error__message,
 .input-success__message {
   display: none;
+  position: absolute;
+  top: 100%;
+  font-size: 12px;
+  padding-left: 15px;
+  padding-top: 5px;
 }
 
-.success-error {
+.input-success {
 
-  &__message {
+  & &__message {
     display: block;
     color: var(--color-success);
-    font-size: 12px;
-    padding-left: 15px;
-    padding-top: 5px;
   }
 }
 
 .input-error {
 
-  &__message {
+  & &__message {
     display: block;
     color: var(--color-error);
-    font-size: 12px;
-    padding-left: 15px;
-    padding-top: 5px;
   }
+}
+
+.input-dropdown {
+
+  &__output {
+    position: absolute;
+    top: calc(100% - 1px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 275px;
+    overflow-y: auto;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--color-white);
+    z-index: 10;
+    border: 1px solid var(--color-grey_2);
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &__item {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-grey_3);
+    }
+  }
+
+  &_active {
+    & .input-dropdown__output {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+}
+
+.error {
+  border-color: var(--color-error);
 }
 
 .btn {
@@ -883,6 +957,8 @@
 .input-textarea {
 
   &__text {
+    position: absolute;
+    top: 100%;
     font-size: 12px;
     color: var(--color-grey_1);
     padding-left: 20px;
@@ -1087,6 +1163,10 @@
 
     &__info_arrow {
       padding-bottom: 8px;
+    }
+
+    &__delete-btn {
+      align-self: flex-start;
     }
 
     &__img {

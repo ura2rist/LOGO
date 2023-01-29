@@ -437,6 +437,7 @@
 
   &__delete-btn {
     background-color: transparent;
+    color: var(--color-black);
     border: none;
     font-size: 14px;
     cursor: pointer;
@@ -1401,5 +1402,12 @@
 
   .number {
     max-width: 150px;
+  }
+
+  .input-dropdown {
+
+    &__item {
+      padding: 10px 15px;
+    }
   }
 }
